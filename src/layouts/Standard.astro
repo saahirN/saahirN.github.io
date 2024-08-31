@@ -1,20 +1,13 @@
 ---
 import Navbar from '../components/Navbar.astro' 
-
-const links = [
-	{name: 'Home', href: '/'},
-	{name: 'About', href: '/about'},
-	{name: 'Blog', href: '/blog'},
-	{name: 'Reading', href: '/reading'}
-];
 ---
 
 <div>
     <div>
-        <Navbar links={links}/>
+        <Navbar/>
     </div>
 
-    <div>
+    <div class="min-h-screen bg-dark">
         <slot></slot>
     </div>
 </div>

@@ -1,10 +1,22 @@
 ---
-const { links } = Astro.props; 
+
+interface Link {
+  name: string;
+  href: string;
+}
+
+const links: Link[] = [
+	{name: 'Home', href: '/'},
+	{name: 'About', href: '/about'},
+	{name: 'Blog', href: '/blog'},
+	{name: 'Reading', href: '/reading'}
+    {name: 'Random', href:'/random}
+];
 ---
 
 <nav>
     <div class="bg-gray-200 flex justify-center pt-8">
-        <ul class=" flex space-x-36">
+        <ul class="flex space-x-36">
             {links.map(link => (
                 <li>
                     <a href={link.href} class="text-gray-900 hover:text-gray-800">{link.name}</a>
