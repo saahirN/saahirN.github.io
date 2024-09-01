@@ -5,7 +5,11 @@ export default {
     extend: {
       colors: {
         dark : '#1e1e1e',
+        darkHead : '#1d2229', 
       },
+      padding : {
+        '1/10': '10%',
+      }
     },
   },
   plugins: [],
